@@ -18,7 +18,7 @@ class Modelisation:
         self.nbImages = 39
         self.positions = []
         self.vitesses = []
-        d=display.display('PATIENTEZ QUELQUES INSTANTS...', display_id='essai')
+        d=display.display('PATIENTEZ QUELQUES INSTANTS...')
 
     def show(self, position, vitesse,F):
         self.image = cv2.imread(
