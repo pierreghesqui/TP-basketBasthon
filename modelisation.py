@@ -1,6 +1,7 @@
 import cv2
 from vecteur import Vecteur
 import numpy as np
+import matplotlib.pyplot as plt
 from IPython.display import display_image
 import IPython.display as display
 
