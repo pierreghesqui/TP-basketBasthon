@@ -1,1 +1,7 @@
-https://mybinder.org/v2/gh/pierreghesqui/TP-basket/main?labpath=TP-Basket.ipynb
+https://notebook.basthon.fr/?module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/fonctions.py
+https://notebook.basthon.fr/?module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/modelisation.py
+https://notebook.basthon.fr/?aux=https://github.com/pierreghesqui/TP-basketBasthon/raw/main/frame0.png
+
+
+Test : https://notebook.basthon.fr/?module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/fonctions.py&https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/modelisation.py&https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/vecteur.py
+https://notebook.basthon.fr/?aux=https://github.com/pierreghesqui/TP-basketBasthon/raw/main/frame0.png

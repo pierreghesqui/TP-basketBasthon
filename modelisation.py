@@ -1,7 +1,9 @@
 import cv2
 from vecteur import Vecteur
 import numpy as np
+from IPython.display import display_image
 import IPython.display as display
+
 import time
 class Modelisation:
     def __init__(self):
@@ -55,9 +57,13 @@ class Modelisation:
             cv2.arrowedLine(self.image, (end_point.x+20,end_point.y-50), (end_point.x+50,end_point.y-50),
                                          colorForce, 2)
         self.dessineCroix(position)
+        
+        '''
         cv2.imwrite('img.png',self.image)
         dispImg = display.Image(filename='img.png',width = 500, height = 500)
         display.update_display(dispImg,display_id='essai')
+        '''
+        display_image(self.image)
         time.sleep(0.200)
         self.imageEnCours = self.imageEnCours +1
         
