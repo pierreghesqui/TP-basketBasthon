@@ -2,16 +2,14 @@ import cv2
 from vecteur import Vecteur
 import numpy as np
 import matplotlib.pyplot as plt
-from IPython.display import display_image
-import IPython.display as display
+from matplotlib import animation
 
-import time
 class Modelisation:
     def __init__(self):
         
         self.ecranLargeur = 1920
         self.ecranHauteur = 1080
-        
+        self.listImages = []
         self.imageEnCours = 0
         self.image = cv2.imread("frame0.png")
         self.nbLignes = self.image.shape[0]
@@ -21,9 +19,8 @@ class Modelisation:
         self.nbImages = 39
         self.positions = []
         self.vitesses = []
-        d=display.display('PATIENTEZ QUELQUES INSTANTS...')
 
-    def show(self, position, vitesse,F):
+    def stockeInfo(self, position, vitesse,F):
         self.image = cv2.imread(
             'frame'+str(self.imageEnCours)+'.png')
         
@@ -58,15 +55,23 @@ class Modelisation:
             cv2.arrowedLine(self.image, (end_point.x+20,end_point.y-50), (end_point.x+50,end_point.y-50),
                                          colorForce, 2)
         self.dessineCroix(position)
-        
-        '''
-        cv2.imwrite('img.png',self.image)
-        dispImg = display.Image(filename='img.png',width = 500, height = 500)
-        display.update_display(dispImg,display_id='essai')
-        '''
-        display_image(self.image)
-        time.sleep(0.200)
+        self.listImages.append(np.copy(self.image))
         self.imageEnCours = self.imageEnCours +1
+    
+    def anima(self):
+        fig = plt.figure()
+        nbImages = self.imageEnCours
+        listImages = self.listImages
+        print(np.shape(listImages))
+        im = plt.imshow(listImages[0],animated=True)
+        
+        def updatefig(i):   
+            im.set_array(listImages[i])
+            return im,
+        anim = animation.FuncAnimation(fig, updatefig ,frames=nbImages, interval=50,repeat=True)
+        return anim
+        #writervideo = animation.PillowWriter(fps=60)
+        #anim.save('increasingStraightLine.gif', writer=writervideo)
         
     def metersToPixel(self, lc):
         pix = lc/self.pixelSize

@@ -1,7 +1,1 @@
-https://notebook.basthon.fr/?module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/fonctions.py
-https://notebook.basthon.fr/?module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/modelisation.py
-https://notebook.basthon.fr/?aux=https://github.com/pierreghesqui/TP-basketBasthon/raw/main/frame0.png
-
-
-Test : https://notebook.basthon.fr/?module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/fonctions.py&https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/modelisation.py&https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/vecteur.py
-https://notebook.basthon.fr/?aux=https://github.com/pierreghesqui/TP-basketBasthon/raw/main/frame0.png
+https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/TP-Basket.ipynb&module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/fonctions.py&module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/modelisation.py&module=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/vecteur.py&aux=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/frame0.png&aux=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/frame1.png&aux=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/frame2.png&aux=https://raw.githubusercontent.com/pierreghesqui/TP-basketBasthon/main/frame3.png
