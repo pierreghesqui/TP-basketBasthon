@@ -6,7 +6,7 @@ from matplotlib import animation
 
 class Modelisation:
     def __init__(self):
-        
+        print("Veuillez Patientez quelques instants...")
         self.ecranLargeur = 1920
         self.ecranHauteur = 1080
         self.listImages = []
@@ -59,12 +59,11 @@ class Modelisation:
         self.imageEnCours = self.imageEnCours +1
     
     def anima(self):
+        print("Votre modélisation va bientôt apparaître ...")
         fig = plt.figure()
         nbImages = self.imageEnCours
         listImages = self.listImages
-        print(np.shape(listImages))
         im = plt.imshow(listImages[0],animated=True)
-        
         def updatefig(i):   
             im.set_array(listImages[i])
             return im,
@@ -83,10 +82,8 @@ class Modelisation:
         return lc
 
     def dessineCroix(self, position):
-        # print(position)
         pix = self.metersToPixel(position)
         pix = Vecteur(pix.x, self.nbLignes-pix.y)
-        # print(pix)
         tailleCroix = 8
         color = (255, 255, 255)
         cv2.line(self.image, (pix.x-tailleCroix, pix.y-tailleCroix),
