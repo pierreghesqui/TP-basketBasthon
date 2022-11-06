@@ -3,10 +3,8 @@ from vecteur import Vecteur
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
-
 class Modelisation:
     def __init__(self):
-        print("Veuillez Patientez quelques instants...")
         self.ecranLargeur = 1920
         self.ecranHauteur = 1080
         self.listImages = []
@@ -25,7 +23,7 @@ class Modelisation:
             'frame'+str(self.imageEnCours)+'.png')
         
         
-        cv2.putText(self.image, "IMAGE "+str(self.imageEnCours), (30, 30),
+        cv2.putText(self.image, "IMAGE "+str(self.imageEnCours), (50, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 1.25, (255, 255, 255), 2, cv2.LINE_AA)
         
         if vitesse.x !=0 and vitesse.y!=0:
@@ -59,13 +57,12 @@ class Modelisation:
         self.imageEnCours = self.imageEnCours +1
     
     def anima(self):
-        print("Votre modélisation va bientôt apparaître ...")
         fig = plt.figure()
         nbImages = self.imageEnCours
         listImages = self.listImages
-        im = plt.imshow(listImages[0],animated=True)
+        im = plt.imshow(cv2.cvtColor(listImages[0],cv2.COLOR_BGR2RGB),animated=True)
         def updatefig(i):   
-            im.set_array(listImages[i])
+            im.set_array(cv2.cvtColor(listImages[i],cv2.COLOR_BGR2RGB))
             return im,
         anim = animation.FuncAnimation(fig, updatefig ,frames=nbImages, interval=50,repeat=True)
         return anim
