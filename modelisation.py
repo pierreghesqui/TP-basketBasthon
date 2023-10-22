@@ -18,7 +18,17 @@ class Modelisation:
         self.positions = []
         self.vitesses = []
 
-    def stockeInfo(self, position, vitesse,F):
+    def montreAnimation(self,x,y,vx,vy,Fx,Fy):
+        
+        for i in range(38):
+            self.stockeInfo(x[i],y[i], vx[i],vy[i],Fx,Fy)
+        anim = self.anima()
+        return anim
+    
+    def stockeInfo(self, xi,yi, vxi,vyi,Fx,Fy):
+        position = Vecteur(xi,yi)
+        vitesse = Vecteur(vxi,vyi)
+        F = Vecteur(Fx,Fy)
         self.image = cv2.imread(
             'frame'+str(self.imageEnCours)+'.png')
         
@@ -58,7 +68,7 @@ class Modelisation:
     
     def anima(self):
         fig = plt.figure()
-        nbImages = self.imageEnCours
+        nbImages = self.imageEnCours-1
         listImages = self.listImages
         im = plt.imshow(cv2.cvtColor(listImages[0],cv2.COLOR_BGR2RGB),animated=True)
         def updatefig(i):   
