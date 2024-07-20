@@ -3,6 +3,7 @@ from vecteur import Vecteur
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
+
 class Modelisation:
     def __init__(self):
         self.ecranLargeur = 1920
